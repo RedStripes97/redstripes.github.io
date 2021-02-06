@@ -3,18 +3,6 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
     */
-
-   var loader = document.querySelector(".loader");
-
-   window.addEventListener("load", vanish);
-   
-   function vanish() {
-   loader.classList.add("nest");
-   }
-       
-
-
-
     (function ($) {
     "use strict"; // Start of use strict
 
@@ -123,61 +111,3 @@ var TxtRotate = function(el, toRotate, period) {
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
     document.body.appendChild(css);
   };
-
-  jQuery(document).ready(function() {
-
-    var mouseX = 0, mouseY = 0;
-    var xp = 0, yp = 0;
-     
-    $(document).mousemove(function(e){
-      mouseX = e.pageX - 0;
-      mouseY = e.pageY - 0; 
-    });
-      
-    setInterval(function(){
-      xp += ((mouseX - xp)/6);
-      yp += ((mouseY - yp)/6);
-      $("#circle").css({left: xp +'px', top: yp +'px'});
-    }, 20);
-    
-    });
-
-    
-
-  //transform: scale(1.2, 1.2);
-  //transition: 0.5s ease;
-  /*
-  .paf5 {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  font-size: 14pt;
-  animation-name: example;
-  animation-duration: 3s;
-  transform: scale(1,1);
-  -webkit-animation: example 5s ease-in-out infinite alternate;
-}
-
-@keyframes example {
-  0%   {transform: scale(1,1);}
-  50%  {transform: scale(2,2);}
-  100%  {transform: scale(1,1);}
-
-    transition: 1s ease-in-out;
-}
-
-*/
-
-/*
-box-shadow: 1px 1px 15px 1px rgba(255, 0, 0, 1);
-animation-duration: 3s;
--webkit-animation: example 3s ease-in-out infinite alternate;
-}
-
-@keyframes example {
-0%   {box-shadow: 1px 1px 5px 1px rgba(255, 0, 0, 1);}
-25%  {box-shadow: 1px 1px 5px 1px rgb(229, 255, 0);}
-50%  {box-shadow: 1px 1px 5px 1px rgb(0, 217, 255);}
-75%  {box-shadow: 1px 1px 5px 1px rgb(47, 0, 255);}
-100%  {box-shadow: 1px 1px 5px 1px rgb(255, 0, 200);}
-}
-*/
